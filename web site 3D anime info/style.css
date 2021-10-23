@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Scheherazade New", serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    transform-style: preserve-3d;
+}
+.container .box {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    margin: 40px;
+    background: rgb(255 0 0 / 32%);
+    backdrop-filter: blur(30px);
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    overflow: hidden;
+    cursor: pointer;
+}
+.container .box:hover {
+    box-shadow: 0px -10px 20px 0px #fff;
+    transform: translateY(-15px);
+}
+
+.container .box::before {
+    content: "Anime";
+    position: absolute;
+    top: -61px;
+    left: 46px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s linear;
+}
+.container .box::after {
+    content: "Anime 3D";
+    position: absolute;
+    bottom: 10px;
+    right: 42px;
+    font-size: 5em;
+    font-weight: 900;
+    color: #fff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s linear;
+    left: 16px;
+    text-align: center;
+    letter-spacing: 16px;
+}
+.container .box:hover::before,
+.container .box:hover::after {
+    opacity: 0.04;
+}
+.container .box .name {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    transform-style: preserve-3d;
+    color: #fff;
+    width: 100%;
+    transform: translate3d(0, 0, 75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+.container .box:hover .name {
+    top: 40px;
+    opacity: 1;
+}
+.container .box .buy {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, 0, 75px);
+    color: #fff;
+    background: #333;
+    padding: 5px 42px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s linear;
+    opacity: 0;
+    z-index: 11;
+    cursor: pointer;
+    overflow: hidden;
+}
+.container .box:hover .buy {
+    bottom: 30px;
+    opacity: 1;
+    cursor: pointer;
+    overflow: hidden;
+}
+.container .box .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    transition: 0.5s linear;
+    transform-style: preserve-3d;
+    z-index: 10;
+    opacity: 0;
+    transform: translate3d(-50%, -50%, 50px);
+}
+.container .box .circle:hover {
+    opacity: 1;
+}
+.container .box .product {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 180px;
+    transition: 0.5s linear;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%, -50%, 0px);
+}
+
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .buy {
+    background: linear-gradient(
+        to right,
+        #3c10534f,
+        #203a4300,
+        #ad538936
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy {
+    background: linear-gradient(
+        to right,
+        #6248aa5e,
+        #203a4300,
+        #5075bb6b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy {
+    background: linear-gradient(
+        to right,
+        #6e48aa6b,
+        #203a4300,
+        #9d50bb6b
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container .box:nth-child(4) .circle,
+.container .box:nth-child(4) .buy {
+    background: linear-gradient(
+        to right,
+        #2c536485,
+        #203a4300,
+        #0f2027a3
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container .box:nth-child(5) .circle,
+.container .box:nth-child(5) .buy {
+    background: linear-gradient(
+        to right,
+        #d7d2cc4a,
+        #203a4300,
+        #30435299
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.container .box:nth-child(6) .circle,
+.container .box:nth-child(6) .buy {
+    background: linear-gradient(
+        to right,
+        #9a847852,
+        #203a4300,
+        #1e130c52
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
